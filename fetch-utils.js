@@ -14,9 +14,9 @@ export async function getDiscography() {
 
 export async function getDisc(id) {
     const response = await client
-        .from('discography')
+        .from('Marina')
         .select()
-        .matches({ id: id })
+        .match({ id: id })
         .single();
 
     return response.data;
