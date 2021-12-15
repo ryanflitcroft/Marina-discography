@@ -1,7 +1,7 @@
 
 body {
     --color1: #3d3d3d;
-    --color2: #d3d3d3;
+    --color2: #666666;
     --color3: ;
     --color4: ;
     --color5: ;
@@ -43,6 +43,11 @@ figure {
     align-items: center;
     text-align: center;
     margin: 1em;
+}
+
+figcaption {
+    margin: 1em;
+    color: var(--color2);
 }
 
 img {

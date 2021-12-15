@@ -25,24 +25,19 @@ export function renderDiscDetail(id) {
     const tracksEl = document.createElement('ol');
 
     const tracks = id.tracks;
-    // console.log(tracks);
-    // console.log(tracks);
 
     for (let track of tracks) {
         const trackEl = document.createElement('li');
         trackEl.textContent = track;
         tracksEl.append(trackEl);
-        console.log(track);
     }
 
-
-    // got it!
     titleEl.textContent = id.title;
     coverEl.src = id.cover;
     coverEl.alt = id.title;
     releaseEl.textContent = id.release;
 
     detailsEl.append(titleEl, coverEl, releaseEl, tracksEl);
-    console.log(detailsEl);
+
     return detailsEl;
 }

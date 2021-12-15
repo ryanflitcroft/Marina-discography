@@ -7,8 +7,8 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 export async function getDiscography() {
     const response = await client
         .from('Marina')
-        .select();
-    // console.log(response.data);
+        .select()
+        .order('id', { ascending: true });
     return response.data;
 }
 
