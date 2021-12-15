@@ -1,8 +1,14 @@
-// import functions and grab DOM elements
+import { getDiscography, getAlbum } from './fetch-utils.js';
+import { renderDiscography } from './render-utils.js';
 
-// let state
+const discographySection = document.querySelector('#discography-section');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+window.addEventListener('load', async() => {
+    const discography = await getDiscography();
+    // console.log(discography);
+
+    for (let disc of discography) {
+        const discographyEl = renderDiscography(disc);
+        discographySection.append(discographyEl);
+    }
+});
