@@ -18,13 +18,14 @@ export function renderDiscography(disc) {
 }
 
 export function renderDiscDetail(id) {
+    const titleEl = document.createElement('h1');
     const detailsEl = document.createElement('figure');
-    const titleEl = document.createElement('figcaption');
+    const releaseEl = document.createElement('figcaption');
     const coverEl = document.createElement('img');
     const tracksEl = document.createElement('ol');
 
     const tracks = id.tracks;
-    console.log(tracks);
+    // console.log(tracks);
     // console.log(tracks);
 
     for (let track of tracks) {
@@ -36,12 +37,12 @@ export function renderDiscDetail(id) {
 
 
     // got it!
-
     titleEl.textContent = id.title;
     coverEl.src = id.cover;
     coverEl.alt = id.title;
+    releaseEl.textContent = id.release;
 
-    detailsEl.append(titleEl, coverEl, tracksEl);
+    detailsEl.append(titleEl, coverEl, releaseEl, tracksEl);
     console.log(detailsEl);
     return detailsEl;
 }
