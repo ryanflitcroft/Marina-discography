@@ -21,33 +21,27 @@ export function renderDiscDetail(id) {
     const detailsEl = document.createElement('figure');
     const titleEl = document.createElement('figcaption');
     const coverEl = document.createElement('img');
-    const tracklistEl = document.createElement('ol');
+    const tracksEl = document.createElement('ol');
 
-    const tracklist = id.tracklist;
-    console.log(tracklist);
-    // console.log(tracklist);
+    const tracks = id.tracks;
+    console.log(tracks);
+    // console.log(tracks);
 
-    // for (let track of tracklist) {
-    //     const trackEl = document.createElement('li');
-    //     trackEl.textContent = track;
-    //     tracklistEl.append(trackEl);
-    //     console.log(track);
-    // }
-
-    for (let i = 0; i < tracklist.length; i++) {
+    for (let track of tracks) {
         const trackEl = document.createElement('li');
-        trackEl.textContent = tracklist[i];
-        tracklistEl.append(trackEl);
+        trackEl.textContent = track;
+        tracksEl.append(trackEl);
+        console.log(track);
     }
 
-    // why will it only return full array or each letter of each array item??
 
+    // got it!
 
     titleEl.textContent = id.title;
     coverEl.src = id.cover;
     coverEl.alt = id.title;
 
-    detailsEl.append(titleEl, coverEl, tracklistEl);
-console.log(detailsEl);
+    detailsEl.append(titleEl, coverEl, tracksEl);
+    console.log(detailsEl);
     return detailsEl;
 }
