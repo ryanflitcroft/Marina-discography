@@ -16,3 +16,7 @@ export function renderDiscography(disc) {
     discographyEl.append(detailsEl);
     return discographyEl;
 }
+
+export function renderDiscDetail(id) {
+    const detailsEl = document.createElement
+}

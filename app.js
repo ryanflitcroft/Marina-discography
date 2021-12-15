@@ -1,4 +1,4 @@
-import { getDiscography, getAlbum } from './fetch-utils.js';
+import { getDiscography } from './fetch-utils.js';
 import { renderDiscography } from './render-utils.js';
 
 const discographySection = document.querySelector('#discography-section');

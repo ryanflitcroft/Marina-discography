@@ -12,12 +12,12 @@ export async function getDiscography() {
     return response.data;
 }
 
-export async function getAlbum(id) {
+export async function getDisc(id) {
     const response = await client
         .from('discography')
         .select()
         .matches({ id: id })
         .single();
-        
+
     return response.data;
 }
