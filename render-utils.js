@@ -28,6 +28,7 @@ export function renderDiscDetail(id) {
 
     for (let track of tracks) {
         const trackEl = document.createElement('li');
+        trackEl.classList.add('tracks');
         trackEl.textContent = track;
         tracksEl.append(trackEl);
     }
